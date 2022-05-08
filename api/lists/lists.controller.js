@@ -36,8 +36,8 @@ async function handlerGetListByUserId(req, res) {
 
 async function handlerCreateList(req, res) {
     try {
-        const list = await createList(req.body);
-        res.status(201).json(list);
+        const newList = await createList(req.body);
+        res.status(201).json(newList);
     } catch (error) {
         res.status(500).json(error.message);
     }
@@ -45,8 +45,8 @@ async function handlerCreateList(req, res) {
 
 async function handlerUpdateList(req, res) {
     try {
-        const list = await updateList(req.params.id, req.body);
-        res.status(200).json(list);
+        const updatedList = await updateList(req.params.id, req.body);
+        res.status(200).json(updatedList);
     } catch (error) {
         res.status(500).json(error.message);
     }
@@ -54,8 +54,8 @@ async function handlerUpdateList(req, res) {
 
 async function handlerDeleteList(req, res) {
     try {
-        const list = await deleteList(req.params.id);
-        res.status(200).json(list);
+        const deletedList = await deleteList(req.params.id);
+        res.status(200).json(deletedList);
     } catch (error) {
         res.status(500).json(error.message);
     }
