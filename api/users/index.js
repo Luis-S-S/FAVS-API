@@ -1,15 +1,18 @@
 const { Router } = require('express');
+
 const router = Router();
 
 const {
-    handlerGetAllUsers,
-    handlerGetUserById,
-    handlerCreateUser,
-    handlerUpdateUser,
-    handlerDeleteUser
+  handlerGetAllUsers,
+  handlerGetUserById,
+  handlerCreateUser,
+  handlerUpdateUser,
+  handlerDeleteUser,
 } = require('./users.controller');
 
-router.get('/', handlerGetAllUsers);
+const { isAuthenticated } = require('../../auth/auth.service');
+
+router.get('/', isAuthenticated(), handlerGetAllUsers);
 router.get('/:id', handlerGetUserById);
 router.post('/', handlerCreateUser);
 router.patch('/:id', handlerUpdateUser);
