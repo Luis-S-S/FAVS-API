@@ -1,10 +1,10 @@
-const favorites = require('./api/favs');
-const user = require('./api/users');
+const lists = require('./api/lists');
+const users = require('./api/users');
 const auth = require('./auth/local');
 
 function routes(app) {
-    app.use('/api/favs', favorites);
-    app.use('/api/user', user);
+    app.use('/api/lists', lists);
+    app.use('/api/users', users);
     app.use('/auth/local', auth);
 }
 
