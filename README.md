@@ -30,6 +30,7 @@ Note: ["Favorites"] is an embedded list. This means we can input as many "Favori
 
 ### TESTING USERS
 | EMAIL | PASSWORD |
+| ----- | -------- |
 | this980@email.com | 12345 |
 | thisc3a@email.com | 12345 |
 | this625@email.com | 12345 |
@@ -44,7 +45,12 @@ Note: ["Favorites"] is an embedded list. This means we can input as many "Favori
      - `/api/articles/search`: The endpoint
      - `?docid=1020&hl=en#dayone`: The query string, in this case and object `{ "docid": "1020", "hl": "en#dayone" }`
 2. Define what is a Web API, Restful and what are the statusCode 200-, 400-, 500-
-   - 
+   - Web API: `Application Programming Interface` as the name implies is an interface usable to access functions from a given library. Instances such as STRIPE API, JWT API, CLOUDINARY API, etc. allows us to interact with these platforms and use their functionalities.
+   - Restful: Is a client-server architecture, in which clients can interact with the server through different endpoints. Restful is not a protocol but instead a rule-set for good practices.
+   - Status codes:
+     - 200- : Success
+     - 400- : Client errors
+     - 500- : Server errors
 3. When we talk about CRUD, what does it mean?
    - CRUD is an acronym we use to reference the 4 main actions performed with a Restful API
      - C: Create, refers to a `POST` METHOD
