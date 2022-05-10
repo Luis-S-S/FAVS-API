@@ -1,7 +1,7 @@
 # FAVS-API
 Restful API implementation.
 
-### Usage
+### USAGE
 - Clone the git repository
 - With the assistance of the development team, verify all environmental variables are set. Follow .env.example file for guidance
 - On the root folder execute `npm install` in the terminal to ensure all dependencies are available
@@ -12,7 +12,7 @@ Restful API implementation.
 - Most of the times the server will be located at port **8080**, still verify the port by checking at the terminal logs.
   - Once the right port is identified go to [http://localhost:port](http://localhost:8080) _link points to default port 8080_
 
-### Endpoints
+### ENDPOINTS
 | METHOD | ENDPOINT | AUTHENTICATION? | BODY FORMAT | OUTCOME |
 | :----: | -------- | :-------------: | ----------- | ------- |
 | POST | /auth/local | No | `{ "email": "user@email.com", "password": "pwd" }` | Returns a token for auth, unless data is incorrect |
@@ -37,7 +37,7 @@ Note: `["Favorites"]` is an embedded list. This means we can input as many "Favo
 
 **All passwords are encrypted**
 
-### Questions
+### QUESTIONS
 1. Indicate which are the parts of the following url: `https://backend.mega-app.com.co:8080/api/articles/search?docid=1020&hl=en#dayone`
    - The sections of the url are the following:
      - `https`: The transfer protocol, in this case is `Hypertext Transfer Protocol Secure`
