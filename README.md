@@ -12,3 +12,12 @@ Restful API implementation.
 - Most of the times the server will be located at port **8080**, still verify the port by checking at the terminal logs.
   - Once the right port is identified go to [http://localhost:port](http://localhost:8080) _link points to default port 8080_
 - Use the following chart to modify the URL depending on which action you want to perform
+
+| METHOD | endpoint | Authentication? | Body format | Outcome |
+| :----: | -------- | :-------------: | ----------- | ------- |
+| POST | /auth/local | No | { "email": "user@email.com", "password": "pwd" } | Returns a token for auth, unless data is incorrect |
+| GET | api/users   | Yes | NA | Returns all users |
+| GET | api/lists   | Yes | NA | Returns all lists from all users |
+| GET | api/lists/user | Yes | NA | Returns all lists of the user logged in |
+| GET | api/lists/:id | Yes | NA | Returns a list if the user logged in is the owner of the list |
+| POST | api/lists | Yes | { "name": "name", "favs": ["Favorites"]* } | Creates a new list for the user logged in |
